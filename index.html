@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ketan</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('img/ketan3.jpeg') no-repeat center center/cover;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ======== NAVBAR ======== */
+    .navbar {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #fff8e7;
+      letter-spacing: 1px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      background: #8B4513;
+    }
+
+    .welcome-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .welcome-box {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 60px 80px;
+      max-width: 750px;
+      animation: fadeIn 1.5s ease-in-out;
+      color: #000; /* Semua teks di dalam box jadi hitam */
+    }
+
+    .welcome-box h1 {
+      font-size: 2.8em;
+      color: #2e1a07;
+      margin-bottom: 10px;
+    }
+
+    .welcome-box h2 {
+      font-size: 1.4em;
+      font-weight: 400;
+      color: #3b230a;
+      margin-bottom: 20px;
+    }
+
+    .welcome-box p {
+      font-size: 1.05em;
+      color: #111;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #8B4513;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #a5642b;
+      transform: scale(1.05);
+    }
+
+    /* ======== FOOTER ======== */
+    footer {
+      background: #8B4513;
+      text-align: center;
+      padding: 15px 0;
+      color: #fff;
+      font-size: 0.95em;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* ======== ANIMASI ======== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ======== RESPONSIVE ======== */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+      }
+
+      .welcome-box {
+        padding: 40px 25px;
+      }
+
+      .welcome-box h1 {
+        font-size: 2.1em;
+      }
+
+      .welcome-box h2 {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar fade-in">
+    <div class="logo">Ketan Jompo</div>
+    <ul>
+      <li><a href="index.html" class="active">Beranda</a></li>
+      <li><a href="product.html">menu</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <section class="welcome-container">
+    <div class="welcome-box">
+      <h1>Selamat Datang di Ketan Bubuk Premium</h1>
+      <h2>Rasakan Keaslian Cita Rasa Tradisional Nusantara</h2>
+      <p>
+        Ketan Bubuk Premium menghadirkan rasa otentik khas Indonesia lembut, harum, dan menggugah selera. 
+        Diproses dari beras ketan pilihan tanpa bahan pengawet, 
+        kami menghidangkan kelezatan yang telah diwariskan dari generasi ke generasi.
+      </p>
+      <a href="product.html" class="btn">Jelajahi Produk Kami</a>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 Ketan Jompo</p>
+  </footer>
+
+</body>
+</html>

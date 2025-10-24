@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Kami - Ketan Jompo</title>
+
+  <!-- Font & Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #fffaf7, #fff5ec);
+      color: #333;
+    }
+
+    a { text-decoration: none; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #6d3b09;
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      animation: slideDown 0.8s ease-in-out;
+    }
+
+    .navbar .logo {
+      font-size: 1.5em;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      transition: 0.3s;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      background: #f1c27d;
+      color: #6d3b09;
+      font-weight: 600;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .contact h1 {
+      font-size: 2.4em;
+      color: #6d3b09;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+    .contact-info {
+      background: #fff;
+      max-width: 650px;
+      margin: 0 auto;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      padding: 40px 30px;
+      border-top: 6px solid #f1c27d;
+      transition: all 0.3s ease;
+    }
+
+    .contact-info:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-info h2 {
+      color: #6d3b09;
+      margin-bottom: 25px;
+      font-size: 1.6em;
+    }
+
+    .contact-info p {
+      font-size: 1em;
+      margin: 12px 0;
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: #6d3b09;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-info a i {
+      font-size: 1.3em;
+      color: #f1c27d;
+    }
+
+    .contact-info a:hover {
+      color: #d89c3a;
+      transform: scale(1.03);
+    }
+
+    /* ===== MAP ===== */
+    .map-container {
+      margin-top: 25px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== TOMBOL LOKASI ===== */
+    .map-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #6d3b09;
+      color: #fff;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 0.95em;
+    }
+
+    .map-button i {
+      margin-right: 8px;
+      color: #f1c27d;
+    }
+
+    .map-button:hover {
+      background: #f1c27d;
+      color: #6d3b09;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      background: #6d3b09;
+      color: #fff;
+      padding: 20px;
+      margin-top: 60px;
+      letter-spacing: 0.5px;
+      font-size: 0.95em;
+      box-shadow: inset 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    /* ===== ANIMASI ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .navbar { flex-direction: column; gap: 10px; padding: 10px 20px; }
+      .navbar ul { flex-direction: column; align-items: center; gap: 8px; }
+      .contact-info { width: 90%; padding: 30px 20px; }
+      .contact h1 { font-size: 1.9em; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Ketan Jompo</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="product.html">Menu</a></li>
+      <li><a href="contact.html" class="active">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <h1>Hubungi Kami</h1>
+    <p class="subtitle">Kami siap membantu Anda. Temukan kami melalui kontak di bawah ini:</p>
+
+    <div class="contact-info">
+      <h2>KETAN JOMPO</h2>
+      <p><strong><i class="bi bi-whatsapp"></i> WhatsApp:</strong> 
+        <a href="">+62 822-3460-0560</a>
+      </p>
+      <p><strong><i class="bi bi-instagram"></i> Instagram: </strong> 
+        <a href="https://instagram.com/ketan_jompo" target="_blank">ketan_jompo</a>
+      </p>
+      <p><strong><i class="bi bi-geo-alt-fill"></i> Alamat:</strong><br>
+        📍 KETAN CETHOL<br>
+        Jl. Sultan Agung, Kepatihan, Jember Kidul,<br>
+        Kec. Kaliwates, Kabupaten Jember,<br>
+        Jawa Timur 68131
+      </p>
+
+      <!-- MAP -->
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps?q=Ketan+Jompo+Jember&output=embed" 
+          width="100%" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Tombol ke Lokasi -->
+      <a class="map-button" href="https://maps.app.goo.gl/QHd7kSAcBSdNAUry9" target="_blank">
+        <i class="bi bi-geo-alt"></i> Lihat di Google Maps
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Ketan Jompo</p>  
+  </footer>
+
+</body>
+</html>
